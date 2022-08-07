@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="static/css/style.css">
+            <title>Encrypted</title>
+        </head>
+    
+        <body>
+            <header>
+                <h1>Encrypt Text</h1>
+            </header>
+    
+            <div id="content">
+                <section di="encript">
+                    <textarea name="" id="text-encrypted" cols="10" rows="20" required placeholder="Insert text in lower case"></textarea>
+                    <input type="submit" value="Encrypt" id="btn-encrypt"/>
+                    <input type="submit" value="Decrypt" id="btn-decrypt"/>
+                </section>
+                
+    
+                <section id="desencrypt">
+                    <textarea id="text-decrypt"></textarea>
+                    <input type="submit" id="btn-copy" value="Copy"/>
+                </section>
+            </div>
+    
+            <footer>
+                <p>&copy; 2022 Copyrigth - Kitsune	</p>
+            </footer>
+    
+            <script src="controller/copy.js" nomodule></script>
+            <script src="controller/main.js" type="module"></script>
+        </body>
+    </html>
+
