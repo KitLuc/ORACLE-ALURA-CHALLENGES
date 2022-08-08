@@ -1,31 +1,37 @@
 
-const special_caracters = /[~$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/g;
-let text_encrypted = "";
-let text_decrypt = "";
+const encoder = {
+    e:"enter",
+    i:"imes",
+    a:"ai",
+    o:"ober",
+    u:"ufat"
+};
+const decoder = {
+    'ai':'a',
+    'enter':'e',
+    'imes':'i',
+    'ober':'o',
+    'ufat':'u'
+};
 
 const toEncrypted = (text) =>
 {
-    text.length > 0 ? text_encrypted = text.replace("ai", "a")
-                                            .replace("enter", "e")
-                                            .replace("imes", "i")
-                                            .replace("ober", "o")
-                                            .replace("ufat", "u"):console.log("Error: No text to encrypt");
-
-    return text_encrypted;
+    for (const key in encoder) {
+        text = text.replaceAll(key, encoder[key]);
+    };
+    console.log(text);
+    return text;
 }
 
-const Decrypt = (text) => {
-    if(text === ""){
-        console.log("Error: No text to decrypt");
-    }else{
-        text_decrypt = text.replace("ai", "a")
-                             .replace("enter", "e")
-                             .replace("imes", "i")
-                             .replace("ober", "o")
-                             .replace("ufat", "u");
-        console.log(text_decrypt);
-    }
+
+const toDecrypt = (text) => 
+{
+    for (const key in decoder) {
+        text = text.replaceAll(key, decoder[key]);
+    };
+    console.log(text);
+    return text;
 }
 
-export { toEncrypted, Decrypt };
+export { toEncrypted, toDecrypt };
 
