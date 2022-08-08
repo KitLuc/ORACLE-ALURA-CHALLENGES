@@ -1,12 +1,14 @@
-
-const encoder = {
-    e:"enter",
-    i:"imes",
-    a:"ai",
-    o:"ober",
-    u:"ufat"
+const encoder = 
+{
+    'e':'enter',
+    'i':'imes',
+    'a':'ai',
+    'o':'ober',
+    'u':'ufat'
 };
-const decoder = {
+
+const decoder = 
+{
     'ai':'a',
     'enter':'e',
     'imes':'i',
@@ -16,10 +18,10 @@ const decoder = {
 
 const toEncrypted = (text) =>
 {
+    console.log(text);
     for (const key in encoder) {
         text = text.replaceAll(key, encoder[key]);
-    };
-    console.log(text);
+    }
     return text;
 }
 
