@@ -18,7 +18,6 @@ const decoder =
 
 const toEncrypted = (text) =>
 {
-    console.log(text);
     for (const key in encoder) {
         text = text.replaceAll(key, encoder[key]);
     }
@@ -30,8 +29,7 @@ const toDecrypt = (text) =>
 {
     for (const key in decoder) {
         text = text.replaceAll(key, decoder[key]);
-    };
-    console.log(text);
+    }
     return text;
 }
 
