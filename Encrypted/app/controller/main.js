@@ -19,7 +19,6 @@ function deletAccents(TEXT) {
 BTN_ENCRYPT.onclick = () => 
 {
     TEXT_DECRYPT.innerHTML = toEncrypted(deletAccents(TEXT_ENCRYPTED.value.toLowerCase()));
-    BTN_COPY.style.display = "block";
 }
 
 BTN_DECRYPT.onclick = () =>
